@@ -1,0 +1,122 @@
+﻿@model junjieComWebApp.Controllers.table_service_request
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br>
+<center><h5>MISAMIS OCCIDENTAL WATER DISTRICT</h5></center>
+<center><h6>Ozamiz City</h6></center>
+<center><h6>Service Request</h6></center>
+<br>
+
+<div>
+    <h4>table_service_request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.request_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.request_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nature_of_request)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nature_of_request)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.remarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.remarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.table_concessionaire.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.table_concessionaire.last_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.service_request_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+<dt>
+    @Html.DisplayNameFor(model => model.table_concessionaire.photo)
+</dt>
+
+<dd>
+    <img src="@Url.Content(@Model.table_concessionaire.photo)" width="100" alt=" @Model.table_concessionaire.photo_alt_text " />
+</dd>
+<dt>
+    @*@Html.DisplayNameFor(model => model.pn_date_of_filing)*@
+</dt>
+
+<dd>
+    @*@Html.DisplayFor(model => model.pn_date_of_filing)*@
+</dd><br>
+<div>
+    &emsp;&emsp;&emsp;&emsp;I&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;, promise to pay Misamis Occidental Water District(MOWD)<br>
+    (   ) Full amount of&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;(P&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;) on or before&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>.<br>
+    (   ) The amount of&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;Monthly payment of  P&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;will be added to my current bill for&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;months starting&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b><br><br>
+    as payment  for my arrears for the month(s) of&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.last_name)</b><br>
+    In the event of my failure to pay any of the obligations above - promised. I hereby authorize the MOWD to disconnect my water services connection without prior notice.<br>
+</div><br>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td>Account Name:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b></td>
+            <td>Representative</td>
+            <td>&emsp;</td>
+        </tr>
+        <tr>
+            <td>Concessionaire's Name:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b></td>
+            <td>Near:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.neighbor)</b></td>
+        </tr>
+        <tr>
+            <td>Account No.</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.account_no)</b></td>
+            <td>Last Reading:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.purok)</b></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.purok)&emsp;@Html.DisplayFor(model => model.table_concessionaire.barangay)&emsp;@Html.DisplayFor(model => model.table_concessionaire.city)</b></td>
+            <td>Meter Serial Number:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.meter_serial_no)</b></td>
+        </tr>
+        <tr>
+            <td>Meter Brand:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.meter_brand)</b></td>
+            <td>Contact No.:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.contact_no)</b></td>
+        </tr>
+    </table><br>
+    <div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.service_request_id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>

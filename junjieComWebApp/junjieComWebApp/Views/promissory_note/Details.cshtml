@@ -1,0 +1,179 @@
+﻿@model junjieComWebApp.Controllers.table_promissory_note
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br>
+<center><h5>MISAMIS OCCIDENTAL WATER DISTRICT</h5></center>
+<center><h6>Ozamiz City</h6></center>
+<center><h6>Promissory Note</h6></center>
+<br>
+
+@*<h2>Details</h2>
+
+<div>
+    <h4>table_promissory_note</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_date_of_filing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_date_of_filing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_amount_in_words_full)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_amount_in_words_full)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_amount_in_pesos_full)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_amount_in_pesos_full)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_date_full)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_date_full)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_amount_in_words_partial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_amount_in_words_partial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_amount_in_pesos_partial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_amount_in_pesos_partial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_month_arrear_applied)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_month_arrear_applied)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_month_starting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_month_starting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pn_month_actual_due)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pn_month_actual_due)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_reading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_reading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.table_concessionaire.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.table_concessionaire.last_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.promissory_note_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+
+<dt>
+    @Html.DisplayNameFor(model => model.table_concessionaire.photo)
+</dt>
+
+<dd>
+    <img src="@Url.Content(@Model.table_concessionaire.photo)" width="100" alt=" @Model.table_concessionaire.photo_alt_text " />
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.pn_date_of_filing)
+</dt>
+
+<dd>
+    @Html.DisplayFor(model => model.pn_date_of_filing)
+</dd><br>
+<div>
+    &emsp;&emsp;&emsp;&emsp;I&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;, promise to pay Misamis Occidental Water District(MOWD)<br>
+    (   ) Full amount of&emsp;<b>@Html.DisplayFor(model => model.pn_amount_in_words_full)</b>&emsp;(P&emsp;<b>@Html.DisplayFor(model => model.pn_amount_in_pesos_full)</b>&emsp;) on or before&emsp;<b>@Html.DisplayFor(model => model.pn_date_full)</b>.<br>
+    (   ) The amount of&emsp;<b>@Html.DisplayFor(model => model.pn_amount_in_words_partial)</b>&emsp;Monthly payment of  P&emsp;<b>@Html.DisplayFor(model => model.pn_amount_in_pesos_partial)</b>&emsp;will be added to my current bill for&emsp;<b>@Html.DisplayFor(model => model.pn_month_arrear_applied)</b>&emsp;months starting&emsp;<b>@Html.DisplayFor(model => model.pn_month_starting)</b><br><br>
+    as payment  for my arrears for the month(s) of&emsp;<b>@Html.DisplayFor(model => model.pn_month_actual_due)</b><br>
+    In the event of my failure to pay any of the obligations above - promised. I hereby authorize the MOWD to disconnect my water services connection without prior notice.<br>
+</div><br>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td>Date</td>
+            <td><b>@Html.DisplayFor(model => model.pn_date_of_filing)</b></td>
+            <td>Representative</td>
+            <td>&emsp;</td>
+        </tr>
+        <tr>
+            <td>Concessionaire's Name:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b></td>
+            <td>Near:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.neighbor)</b></td>
+        </tr>
+        <tr>
+            <td>Account No.</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.account_no)</b></td>
+            <td>Last Reading:</td>
+            <td><b>@Html.DisplayFor(model => model.last_reading)</b></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.purok)&emsp;@Html.DisplayFor(model => model.table_concessionaire.barangay)&emsp;@Html.DisplayFor(model => model.table_concessionaire.city)</b></td>
+            <td>Meter Serial Number:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.meter_serial_no)</b></td>
+        </tr>
+        <tr>
+            <td>Meter Brand:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.meter_brand)</b></td>
+            <td>Contact No.:</td>
+            <td><b>@Html.DisplayFor(model => model.table_concessionaire.contact_no)</b></td>
+        </tr>
+    </table><br>
+    <div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.promissory_note_id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>

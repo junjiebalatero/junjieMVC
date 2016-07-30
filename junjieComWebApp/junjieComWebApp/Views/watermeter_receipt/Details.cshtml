@@ -1,0 +1,91 @@
+﻿@model junjieComWebApp.Controllers.table_watermeter_receipt
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2>Details</h2>
+
+<div>
+    <h4>table_watermeter_receipt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.actual_date_installed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.actual_date_installed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.watermeter_receipt_remarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.watermeter_receipt_remarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.installed_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.installed_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.table_concessionaire.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.table_concessionaire.last_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.watermeter_receipt_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+
+<br>
+<center><h5>MISAMIS OCCIDENTAL WATER DISTRICT</h5></center>
+<center><h6>Ozamiz City</h6></center>
+<center><h6>Watermeter Receipt</h6></center>
+<br>
+<dt>
+    @Html.DisplayNameFor(model => model.table_concessionaire.photo)
+</dt>
+
+<dd>
+    <img src="@Url.Content(@Model.table_concessionaire.photo)" width="100" alt=" @Model.table_concessionaire.photo_alt_text " />
+    @*@Html.DisplayFor(model => model.table_concessionaire.photo)*@
+</dd>
+<dt>
+    @Html.DisplayNameFor(model => model.actual_date_installed)
+</dt>
+
+<dd>
+    @Html.DisplayFor(model => model.actual_date_installed)
+</dd><br>
+
+To Whom it May Concern:<br><br>
+&emsp;&emsp;I HEREBY CERTIFY that my water service connection, located at purok&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.purok)&emsp;@Html.DisplayFor(model => model.table_concessionaire.barangay)&emsp;@Html.DisplayFor(model => model.table_concessionaire.city)</b>&emsp;on&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.date_file)</b>&emsp;was installed with a water, bearing Serial No.<b>@Html.DisplayFor(model => model.table_concessionaire.meter_serial_no)</b>&emsp;<br>
+&emsp;&emsp;Made by the personnel of MISAMIS OCCIDENTAL WATR DISTRICT (MOWD), Maningcol, Ozamiz City and the receipt of the name is hereby acknowledged.<br><br>
+&emsp;&emsp;I HEREBY AGREE to the location of the water meter installed and that the water meter complete with accessories and sealed, installed therein is in good condition.<br><br>
+&emsp;&emsp;I HEREBY CERTIFY further that I am responsible for the damage and loss of said water meter in accordance with the rules and regulation of the District.<br><br>
+Done this&emsp;<b>@Html.DisplayFor(model => model.actual_date_installed)</b>&emsp;Maningcol, Ozamiz City.<br><br>
+<center><b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b></center><br>
+<center>Signature over Printed Name of Concessionaire</center><br>
+Installed by:&emsp;<b>@Html.DisplayFor(model => model.installed_by)</b><br>
+Initial Reading:&emsp;&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.initial_reading)</b><br>
+Address:&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.purok)</b><br>
+Water Meter Sealed by:&emsp;<b>@Html.DisplayFor(model => model.installed_by)</b><br>
+Account Number:&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.account_no)</b><br>
+Remarks:&emsp;<b>@Html.DisplayFor(model => model.watermeter_receipt_remarks)</b><br><br>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.watermeter_receipt_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

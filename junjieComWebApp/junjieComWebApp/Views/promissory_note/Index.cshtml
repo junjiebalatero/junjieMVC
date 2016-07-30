@@ -1,0 +1,97 @@
+﻿@model IEnumerable<junjieComWebApp.Controllers.table_promissory_note>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br>
+<center><h5>MISAMIS OCCIDENTAL WATER DISTRICT</h5></center>
+<center><h6>Ozamiz City</h6></center>
+<center><h6>Promissory Note List</h6></center>
+<br>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_date_of_filing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_amount_in_words_full)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_amount_in_pesos_full)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_date_full)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_amount_in_words_partial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_amount_in_pesos_partial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_month_arrear_applied)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_month_starting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn_month_actual_due)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_reading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.table_concessionaire.last_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_date_of_filing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_amount_in_words_full)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_amount_in_pesos_full)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_date_full)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_amount_in_words_partial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_amount_in_pesos_partial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_month_arrear_applied)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_month_starting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn_month_actual_due)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_reading)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.table_concessionaire.last_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.promissory_note_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.promissory_note_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.promissory_note_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<junjieComWebApp.Controllers.table_waiver>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br>
+<center><h5>MISAMIS OCCIDENTAL WATER DISTRICT</h5></center>
+<center><h6>Ozamiz City</h6></center>
+<center><h6>Waiver List</h6></center>
+<br>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.waiver_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.table_concessionaire.last_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.waiver_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.table_concessionaire.last_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.waiver_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.waiver_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.waiver_id })
+        </td>
+    </tr>
+}
+
+</table>

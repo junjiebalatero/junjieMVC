@@ -1,0 +1,64 @@
+﻿@model junjieComWebApp.Controllers.table_waiver
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2>Details</h2>
+
+<div>
+    <h4>table_waiver</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.waiver_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.waiver_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.table_concessionaire.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.table_concessionaire.last_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.waiver_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+
+<br>
+<center><h5>MISAMIS OCCIDENTAL WATER DISTRICT</h5></center>
+<center><h6>Ozamiz City</h6></center>
+<center><h6>WAIVER</h6></center>
+<br>
+<dt>
+<dt>
+    @Html.DisplayNameFor(model => model.table_concessionaire.photo)
+</dt>
+
+<dd>
+    <img src="@Url.Content(@Model.table_concessionaire.photo)" width="100" alt=" @Model.table_concessionaire.photo_alt_text " />
+</dd><br>
+@Html.DisplayNameFor(model => model.waiver_date)
+</dt>
+
+<dd>
+    @Html.DisplayFor(model => model.waiver_date)
+</dd><br>
+
+&emsp;&emsp;&emsp;&emsp;I&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b>&emsp;, a water concessionaire of the MISAMIS OCCIDENTAL WATER DISTRICT (MOWD), Ozamiz City with address at purok&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.purok) @Html.DisplayFor(model => model.table_concessionaire.barangay) @Html.DisplayFor(model => model.table_concessionaire.city)</b>&emsp;and meter Number&emsp;<b>@Html.DisplayFor(model => model.table_concessionaire.meter_serial_no)</b>&emsp;am aware of MOWD's policy embodied in Board Resolution No. 04 series 2012, entitling me to a ONE - TIME ADJUSTMENT of my water bill in case of non - visible leakages after the meter,  and that I waive any and all rights under the said Resolution should similar leakages occur again after my meter.<br><br>
+Done this&emsp;<b>@Html.DisplayFor(model => model.waiver_date)</b>&emsp;Maningcol, Ozamiz City.<br><br>
+<center><b>@Html.DisplayFor(model => model.table_concessionaire.first_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.middle_name)&emsp;@Html.DisplayFor(model => model.table_concessionaire.last_name)</b></center><br>
+<center>Signature over Printed Name of Concessionaire</center><br>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.waiver_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

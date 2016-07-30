@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="junjie_commercialModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="table_concessionaire">
+    <Key>
+      <PropertyRef Name="concessionaire_id" />
+    </Key>
+    <Property Name="concessionaire_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="last_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="first_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="middle_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="account_no" Type="nvarchar" MaxLength="250" />
+    <Property Name="photo" Type="nvarchar" MaxLength="100" />
+    <Property Name="photo_alt_text" Type="nvarchar" MaxLength="100" />
+    <Property Name="purok" Type="nvarchar" MaxLength="250" />
+    <Property Name="barangay" Type="nvarchar" MaxLength="250" />
+    <Property Name="city" Type="nvarchar" MaxLength="250" />
+    <Property Name="neighbor" Type="nvarchar" MaxLength="250" />
+    <Property Name="birth_date" Type="datetime" />
+    <Property Name="contact_no" Type="nvarchar" MaxLength="25" />
+    <Property Name="occupation" Type="nvarchar" MaxLength="250" />
+    <Property Name="age" Type="int" />
+    <Property Name="sex" Type="nvarchar" MaxLength="25" />
+    <Property Name="civil_status" Type="nvarchar" MaxLength="25" />
+    <Property Name="birth_place" Type="nvarchar" MaxLength="250" />
+    <Property Name="employer_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="employer_address" Type="nvarchar" MaxLength="250" />
+    <Property Name="father_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="father_address" Type="nvarchar" MaxLength="250" />
+    <Property Name="mother_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="mother_address" Type="nvarchar" MaxLength="250" />
+    <Property Name="spouse_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="sp_father_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="sp_father_address" Type="nvarchar" MaxLength="250" />
+    <Property Name="sp_mother_name" Type="nvarchar" MaxLength="250" />
+    <Property Name="sp_mother_address" Type="nvarchar" MaxLength="250" />
+    <Property Name="date_file" Type="datetime" />
+    <Property Name="classification" Type="nvarchar" MaxLength="25" />
+    <Property Name="meter_brand" Type="nvarchar" MaxLength="25" />
+    <Property Name="meter_serial_no" Type="nvarchar" MaxLength="25" />
+    <Property Name="initial_reading" Type="int" />
+    <Property Name="connection_size" Type="nvarchar" MaxLength="25" />
+    <Property Name="system_adequate" Type="nvarchar" MaxLength="25" />
+    <Property Name="plumber_available" Type="nvarchar" MaxLength="25" />
+    <Property Name="inspected_by" Type="nvarchar" MaxLength="200" />
+    <Property Name="date_inspected" Type="datetime" />
+    <Property Name="copy_received_by" Type="nvarchar" MaxLength="200" />
+    <Property Name="installation_fee" Type="nvarchar" MaxLength="25" />
+    <Property Name="inspection_fee" Type="nvarchar" MaxLength="25" />
+    <Property Name="others" Type="nvarchar" MaxLength="25" />
+    <Property Name="total_amount_due" Type="nvarchar" MaxLength="25" />
+    <Property Name="o_r_number" Type="int" />
+    <Property Name="o_r_receipt_date" Type="datetime" />
+    <Property Name="o_r_amount" Type="nvarchar" MaxLength="25" />
+    <Property Name="saddle_clamp_quantity" Type="int" />
+    <Property Name="saddle_clamp_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="lm_poly_pipe_1/2_quantity" Type="int" />
+    <Property Name="lm_poly_pipe_1/2_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="lm_poly_pipe_3/4_quantity" Type="int" />
+    <Property Name="lm_poly_pipe_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="replacement_piece_1/2_quantity" Type="int" />
+    <Property Name="replacement_piece_1/2_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="replacement_piece_3/4_quantity" Type="int" />
+    <Property Name="replacement_piece_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_elbow_1/2_x_90_quantity" Type="int" />
+    <Property Name="g_i_elbow_1/2_x_90_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_elbow_1_x_90_quantity" Type="int" />
+    <Property Name="g_i_elbow_1_x_90_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_elbow_2_x_90_quantity" Type="int" />
+    <Property Name="g_i_elbow_2_x_90_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_st_elbow_1/2_x_90_quantity" Type="int" />
+    <Property Name="g_i_st_elbow_1/2_x_90_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_st_elbow_3/4_x_90_quantity" Type="int" />
+    <Property Name="g_i_st_elbow_3/4_x_90_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_pipe_1/2_quantity" Type="int" />
+    <Property Name="g_i_pipe_1/2_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_meterstand_1/2_x_12_quantity" Type="int" />
+    <Property Name="g_i_meterstand_1/2_x_12_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_meterstand_1/2_x_24_quantity" Type="int" />
+    <Property Name="g_i_meterstand_1/2_x_24_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_nipple_1/2_x_4_quantity" Type="int" />
+    <Property Name="g_i_nipple_1/2_x_4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_nipple_1/2_x_6_quantity" Type="int" />
+    <Property Name="g_i_nipple_1/2_x_6_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_nipple_1/2_x_8_quantity" Type="int" />
+    <Property Name="g_i_nipple_1/2_x_8_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_nipple_1/2_x_10_quantity" Type="int" />
+    <Property Name="g_i_nipple_1/2_x_10_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_reduced_elbow_1/2_x_3/4_90_quantity" Type="int" />
+    <Property Name="g_i_reduced_elbow_1/2_x_3/4_90_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_reduced_tee_3/4_x_2_quantity" Type="int" />
+    <Property Name="g_i_reduced_tee_3/4_x_2_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_cross_tee_1/2_quantity" Type="int" />
+    <Property Name="g_i_cross_tee_1/2_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_cross_tee_3/4_quantity" Type="int" />
+    <Property Name="g_i_cross_tee_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_cross_tee_1_quantity" Type="int" />
+    <Property Name="g_i_cross_tee_1_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_plug_1/2_quantity" Type="int" />
+    <Property Name="g_i_plug_1/2_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_plug_3/4_quantity" Type="int" />
+    <Property Name="g_i_plug_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_plug_1_quantity" Type="int" />
+    <Property Name="g_i_plug_1_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_bushing_1/2_x_3/4_quantity" Type="int" />
+    <Property Name="g_i_bushing_1/2_x_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_bushing_1_x_3/4_quantity" Type="int" />
+    <Property Name="g_i_bushing_1_x_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_bushing_2_x_3/4_quantity" Type="int" />
+    <Property Name="g_i_bushing_2_x_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_st_coupling_1/2_quantity" Type="int" />
+    <Property Name="g_i_st_coupling_1/2_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="g_i_st_coupling_3/4_quantity" Type="int" />
+    <Property Name="g_i_st_coupling_3/4_unit" Type="nvarchar" MaxLength="25" />
+    <Property Name="tapelon_quantity" Type="int" />
+    <Property Name="tapelon_unit" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="table_maintenance_order">
+    <Key>
+      <PropertyRef Name="maintenance_order_id" />
+    </Key>
+    <Property Name="maintenance_order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="concessionaire_id" Type="int" Nullable="false" />
+    <Property Name="maintenance_date" Type="datetime" />
+    <Property Name="nature_of_maintenance" Type="nvarchar" MaxLength="250" />
+    <Property Name="maintenance_remarks" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="table_promissory_note">
+    <Key>
+      <PropertyRef Name="promissory_note_id" />
+    </Key>
+    <Property Name="promissory_note_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="concessionaire_id" Type="int" Nullable="false" />
+    <Property Name="pn_date_of_filing" Type="datetime" />
+    <Property Name="pn_amount_in_words_full" Type="nvarchar" MaxLength="250" />
+    <Property Name="pn_amount_in_pesos_full" Type="nvarchar" MaxLength="25" />
+    <Property Name="pn_date_full" Type="datetime" />
+    <Property Name="pn_amount_in_words_partial" Type="nvarchar" MaxLength="250" />
+    <Property Name="pn_amount_in_pesos_partial" Type="nvarchar" MaxLength="25" />
+    <Property Name="pn_month_arrear_applied" Type="nvarchar" MaxLength="25" />
+    <Property Name="pn_month_starting" Type="nvarchar" MaxLength="25" />
+    <Property Name="pn_month_actual_due" Type="nvarchar" MaxLength="25" />
+    <Property Name="last_reading" Type="int" />
+  </EntityType>
+  <EntityType Name="table_service_request">
+    <Key>
+      <PropertyRef Name="service_request_id" />
+    </Key>
+    <Property Name="service_request_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="concessionaire_id" Type="int" Nullable="false" />
+    <Property Name="request_date" Type="datetime" />
+    <Property Name="nature_of_request" Type="nvarchar" MaxLength="250" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="table_waiver">
+    <Key>
+      <PropertyRef Name="waiver_id" />
+    </Key>
+    <Property Name="waiver_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="concessionaire_id" Type="int" Nullable="false" />
+    <Property Name="waiver_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="table_watermeter_receipt">
+    <Key>
+      <PropertyRef Name="watermeter_receipt_id" />
+    </Key>
+    <Property Name="watermeter_receipt_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="concessionaire_id" Type="int" Nullable="false" />
+    <Property Name="actual_date_installed" Type="datetime" />
+    <Property Name="watermeter_receipt_remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="installed_by" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <Association Name="FK_table_maintenance_order_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_maintenance_order" Type="Self.table_maintenance_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_maintenance_order">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_promissory_note_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_promissory_note" Type="Self.table_promissory_note" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_promissory_note">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_service_request_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_service_request" Type="Self.table_service_request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_service_request">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_waiver_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_waiver" Type="Self.table_waiver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_waiver">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_watermeter_receipt_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_watermeter_receipt" Type="Self.table_watermeter_receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_watermeter_receipt">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="junjie_commercialModelStoreContainer">
+    <EntitySet Name="table_concessionaire" EntityType="Self.table_concessionaire" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="table_maintenance_order" EntityType="Self.table_maintenance_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="table_promissory_note" EntityType="Self.table_promissory_note" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="table_service_request" EntityType="Self.table_service_request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="table_waiver" EntityType="Self.table_waiver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="table_watermeter_receipt" EntityType="Self.table_watermeter_receipt" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_table_maintenance_order_table_concessionaire" Association="Self.FK_table_maintenance_order_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_maintenance_order" EntitySet="table_maintenance_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_promissory_note_table_concessionaire" Association="Self.FK_table_promissory_note_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_promissory_note" EntitySet="table_promissory_note" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_service_request_table_concessionaire" Association="Self.FK_table_service_request_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_service_request" EntitySet="table_service_request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_waiver_table_concessionaire" Association="Self.FK_table_waiver_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_waiver" EntitySet="table_waiver" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_watermeter_receipt_table_concessionaire" Association="Self.FK_table_watermeter_receipt_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_watermeter_receipt" EntitySet="table_watermeter_receipt" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

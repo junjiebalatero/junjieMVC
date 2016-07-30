@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="junjie_commercialModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="table_concessionaire">
+    <Key>
+      <PropertyRef Name="concessionaire_id" />
+    </Key>
+    <Property Name="concessionaire_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="last_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="first_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="middle_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="account_no" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="photo_alt_text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="purok" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="barangay" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="neighbor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="birth_date" Type="DateTime" Precision="3" />
+    <Property Name="contact_no" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="occupation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="sex" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="civil_status" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="birth_place" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="employer_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="employer_address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="father_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="father_address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="mother_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="mother_address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="spouse_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="sp_father_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="sp_father_address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="sp_mother_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="sp_mother_address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="date_file" Type="DateTime" Precision="3" />
+    <Property Name="classification" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="meter_brand" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="meter_serial_no" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="initial_reading" Type="Int32" />
+    <Property Name="connection_size" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="system_adequate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="plumber_available" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="inspected_by" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="date_inspected" Type="DateTime" Precision="3" />
+    <Property Name="copy_received_by" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="installation_fee" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="inspection_fee" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="others" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="total_amount_due" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="o_r_number" Type="Int32" />
+    <Property Name="o_r_receipt_date" Type="DateTime" Precision="3" />
+    <Property Name="o_r_amount" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="saddle_clamp_quantity" Type="Int32" />
+    <Property Name="saddle_clamp_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="lm_poly_pipe_1_2_quantity" Type="Int32" />
+    <Property Name="lm_poly_pipe_1_2_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="lm_poly_pipe_3_4_quantity" Type="Int32" />
+    <Property Name="lm_poly_pipe_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="replacement_piece_1_2_quantity" Type="Int32" />
+    <Property Name="replacement_piece_1_2_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="replacement_piece_3_4_quantity" Type="Int32" />
+    <Property Name="replacement_piece_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_elbow_1_2_x_90_quantity" Type="Int32" />
+    <Property Name="g_i_elbow_1_2_x_90_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_elbow_1_x_90_quantity" Type="Int32" />
+    <Property Name="g_i_elbow_1_x_90_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_elbow_2_x_90_quantity" Type="Int32" />
+    <Property Name="g_i_elbow_2_x_90_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_st_elbow_1_2_x_90_quantity" Type="Int32" />
+    <Property Name="g_i_st_elbow_1_2_x_90_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_st_elbow_3_4_x_90_quantity" Type="Int32" />
+    <Property Name="g_i_st_elbow_3_4_x_90_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_pipe_1_2_quantity" Type="Int32" />
+    <Property Name="g_i_pipe_1_2_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_meterstand_1_2_x_12_quantity" Type="Int32" />
+    <Property Name="g_i_meterstand_1_2_x_12_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_meterstand_1_2_x_24_quantity" Type="Int32" />
+    <Property Name="g_i_meterstand_1_2_x_24_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_nipple_1_2_x_4_quantity" Type="Int32" />
+    <Property Name="g_i_nipple_1_2_x_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_nipple_1_2_x_6_quantity" Type="Int32" />
+    <Property Name="g_i_nipple_1_2_x_6_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_nipple_1_2_x_8_quantity" Type="Int32" />
+    <Property Name="g_i_nipple_1_2_x_8_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_nipple_1_2_x_10_quantity" Type="Int32" />
+    <Property Name="g_i_nipple_1_2_x_10_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_reduced_elbow_1_2_x_3_4_90_quantity" Type="Int32" />
+    <Property Name="g_i_reduced_elbow_1_2_x_3_4_90_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_reduced_tee_3_4_x_2_quantity" Type="Int32" />
+    <Property Name="g_i_reduced_tee_3_4_x_2_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_cross_tee_1_2_quantity" Type="Int32" />
+    <Property Name="g_i_cross_tee_1_2_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_cross_tee_3_4_quantity" Type="Int32" />
+    <Property Name="g_i_cross_tee_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_cross_tee_1_quantity" Type="Int32" />
+    <Property Name="g_i_cross_tee_1_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_plug_1_2_quantity" Type="Int32" />
+    <Property Name="g_i_plug_1_2_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_plug_3_4_quantity" Type="Int32" />
+    <Property Name="g_i_plug_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_plug_1_quantity" Type="Int32" />
+    <Property Name="g_i_plug_1_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_bushing_1_2_x_3_4_quantity" Type="Int32" />
+    <Property Name="g_i_bushing_1_2_x_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_bushing_1_x_3_4_quantity" Type="Int32" />
+    <Property Name="g_i_bushing_1_x_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_bushing_2_x_3_4_quantity" Type="Int32" />
+    <Property Name="g_i_bushing_2_x_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_st_coupling_1_2_quantity" Type="Int32" />
+    <Property Name="g_i_st_coupling_1_2_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="g_i_st_coupling_3_4_quantity" Type="Int32" />
+    <Property Name="g_i_st_coupling_3_4_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="tapelon_quantity" Type="Int32" />
+    <Property Name="tapelon_unit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="table_maintenance_order" Relationship="Self.FK_table_maintenance_order_table_concessionaire" FromRole="table_concessionaire" ToRole="table_maintenance_order" />
+    <NavigationProperty Name="table_promissory_note" Relationship="Self.FK_table_promissory_note_table_concessionaire" FromRole="table_concessionaire" ToRole="table_promissory_note" />
+    <NavigationProperty Name="table_service_request" Relationship="Self.FK_table_service_request_table_concessionaire" FromRole="table_concessionaire" ToRole="table_service_request" />
+    <NavigationProperty Name="table_waiver" Relationship="Self.FK_table_waiver_table_concessionaire" FromRole="table_concessionaire" ToRole="table_waiver" />
+    <NavigationProperty Name="table_watermeter_receipt" Relationship="Self.FK_table_watermeter_receipt_table_concessionaire" FromRole="table_concessionaire" ToRole="table_watermeter_receipt" />
+  </EntityType>
+  <EntityType Name="table_maintenance_order">
+    <Key>
+      <PropertyRef Name="maintenance_order_id" />
+    </Key>
+    <Property Name="maintenance_order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="concessionaire_id" Type="Int32" Nullable="false" />
+    <Property Name="maintenance_date" Type="DateTime" Precision="3" />
+    <Property Name="nature_of_maintenance" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="maintenance_remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="table_concessionaire" Relationship="Self.FK_table_maintenance_order_table_concessionaire" FromRole="table_maintenance_order" ToRole="table_concessionaire" />
+  </EntityType>
+  <EntityType Name="table_promissory_note">
+    <Key>
+      <PropertyRef Name="promissory_note_id" />
+    </Key>
+    <Property Name="promissory_note_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="concessionaire_id" Type="Int32" Nullable="false" />
+    <Property Name="pn_date_of_filing" Type="DateTime" Precision="3" />
+    <Property Name="pn_amount_in_words_full" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="pn_amount_in_pesos_full" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="pn_date_full" Type="DateTime" Precision="3" />
+    <Property Name="pn_amount_in_words_partial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="pn_amount_in_pesos_partial" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="pn_month_arrear_applied" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="pn_month_starting" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="pn_month_actual_due" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="last_reading" Type="Int32" />
+    <NavigationProperty Name="table_concessionaire" Relationship="Self.FK_table_promissory_note_table_concessionaire" FromRole="table_promissory_note" ToRole="table_concessionaire" />
+  </EntityType>
+  <EntityType Name="table_service_request">
+    <Key>
+      <PropertyRef Name="service_request_id" />
+    </Key>
+    <Property Name="service_request_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="concessionaire_id" Type="Int32" Nullable="false" />
+    <Property Name="request_date" Type="DateTime" Precision="3" />
+    <Property Name="nature_of_request" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="table_concessionaire" Relationship="Self.FK_table_service_request_table_concessionaire" FromRole="table_service_request" ToRole="table_concessionaire" />
+  </EntityType>
+  <EntityType Name="table_waiver">
+    <Key>
+      <PropertyRef Name="waiver_id" />
+    </Key>
+    <Property Name="waiver_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="concessionaire_id" Type="Int32" Nullable="false" />
+    <Property Name="waiver_date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="table_concessionaire" Relationship="Self.FK_table_waiver_table_concessionaire" FromRole="table_waiver" ToRole="table_concessionaire" />
+  </EntityType>
+  <EntityType Name="table_watermeter_receipt">
+    <Key>
+      <PropertyRef Name="watermeter_receipt_id" />
+    </Key>
+    <Property Name="watermeter_receipt_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="concessionaire_id" Type="Int32" Nullable="false" />
+    <Property Name="actual_date_installed" Type="DateTime" Precision="3" />
+    <Property Name="watermeter_receipt_remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="table_concessionaire" Relationship="Self.FK_table_watermeter_receipt_table_concessionaire" FromRole="table_watermeter_receipt" ToRole="table_concessionaire" />
+    <Property Name="installed_by" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_table_maintenance_order_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_maintenance_order" Type="Self.table_maintenance_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_maintenance_order">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_promissory_note_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_promissory_note" Type="Self.table_promissory_note" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_promissory_note">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_service_request_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_service_request" Type="Self.table_service_request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_service_request">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_waiver_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_waiver" Type="Self.table_waiver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_waiver">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_table_watermeter_receipt_table_concessionaire">
+    <End Role="table_concessionaire" Type="Self.table_concessionaire" Multiplicity="1" />
+    <End Role="table_watermeter_receipt" Type="Self.table_watermeter_receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="table_concessionaire">
+        <PropertyRef Name="concessionaire_id" />
+      </Principal>
+      <Dependent Role="table_watermeter_receipt">
+        <PropertyRef Name="concessionaire_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="junjie_commercialEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="table_concessionaire" EntityType="Self.table_concessionaire" />
+    <EntitySet Name="table_maintenance_order" EntityType="Self.table_maintenance_order" />
+    <EntitySet Name="table_promissory_note" EntityType="Self.table_promissory_note" />
+    <EntitySet Name="table_service_request" EntityType="Self.table_service_request" />
+    <EntitySet Name="table_waiver" EntityType="Self.table_waiver" />
+    <EntitySet Name="table_watermeter_receipt" EntityType="Self.table_watermeter_receipt" />
+    <AssociationSet Name="FK_table_maintenance_order_table_concessionaire" Association="Self.FK_table_maintenance_order_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_maintenance_order" EntitySet="table_maintenance_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_promissory_note_table_concessionaire" Association="Self.FK_table_promissory_note_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_promissory_note" EntitySet="table_promissory_note" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_service_request_table_concessionaire" Association="Self.FK_table_service_request_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_service_request" EntitySet="table_service_request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_waiver_table_concessionaire" Association="Self.FK_table_waiver_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_waiver" EntitySet="table_waiver" />
+    </AssociationSet>
+    <AssociationSet Name="FK_table_watermeter_receipt_table_concessionaire" Association="Self.FK_table_watermeter_receipt_table_concessionaire">
+      <End Role="table_concessionaire" EntitySet="table_concessionaire" />
+      <End Role="table_watermeter_receipt" EntitySet="table_watermeter_receipt" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

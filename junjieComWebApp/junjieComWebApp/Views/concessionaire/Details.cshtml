@@ -1,0 +1,883 @@
+﻿@model junjieComWebApp.Controllers.table_concessionaire
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>table_concessionaire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.middle_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.middle_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.account_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.account_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(@Model.photo)" width="100" alt=" @Model.photo_alt_text " />
+            @*@Html.DisplayFor(model => model.photo)*@
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.photo_alt_text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo_alt_text)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.purok)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.purok)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.barangay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.barangay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.neighbor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.neighbor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birth_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birth_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contact_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contact_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.occupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.occupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.civil_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.civil_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birth_place)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birth_place)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employer_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employer_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employer_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employer_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.father_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.father_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.father_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.father_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mother_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mother_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mother_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mother_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.spouse_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.spouse_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sp_father_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sp_father_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sp_father_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sp_father_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sp_mother_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sp_mother_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sp_mother_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sp_mother_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_file)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_file)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.meter_brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.meter_brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.meter_serial_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.meter_serial_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.initial_reading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.initial_reading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.connection_size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.connection_size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.system_adequate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.system_adequate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plumber_available)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plumber_available)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.inspected_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.inspected_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_inspected)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_inspected)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.copy_received_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.copy_received_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.installation_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.installation_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.inspection_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.inspection_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.others)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.others)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_amount_due)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_amount_due)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.o_r_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.o_r_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.o_r_receipt_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.o_r_receipt_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.o_r_amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.o_r_amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saddle_clamp_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saddle_clamp_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saddle_clamp_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saddle_clamp_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lm_poly_pipe_1_2_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lm_poly_pipe_1_2_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lm_poly_pipe_1_2_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lm_poly_pipe_1_2_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lm_poly_pipe_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lm_poly_pipe_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lm_poly_pipe_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lm_poly_pipe_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.replacement_piece_1_2_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.replacement_piece_1_2_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.replacement_piece_1_2_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.replacement_piece_1_2_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.replacement_piece_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.replacement_piece_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.replacement_piece_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.replacement_piece_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_elbow_1_2_x_90_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_elbow_1_2_x_90_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_elbow_1_2_x_90_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_elbow_1_2_x_90_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_elbow_1_x_90_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_elbow_1_x_90_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_elbow_1_x_90_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_elbow_1_x_90_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_elbow_2_x_90_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_elbow_2_x_90_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_elbow_2_x_90_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_elbow_2_x_90_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_elbow_1_2_x_90_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_elbow_1_2_x_90_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_elbow_1_2_x_90_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_elbow_1_2_x_90_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_elbow_3_4_x_90_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_elbow_3_4_x_90_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_elbow_3_4_x_90_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_elbow_3_4_x_90_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_pipe_1_2_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_pipe_1_2_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_pipe_1_2_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_pipe_1_2_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_meterstand_1_2_x_12_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_meterstand_1_2_x_12_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_meterstand_1_2_x_12_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_meterstand_1_2_x_12_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_meterstand_1_2_x_24_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_meterstand_1_2_x_24_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_meterstand_1_2_x_24_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_meterstand_1_2_x_24_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_6_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_6_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_6_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_6_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_8_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_8_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_8_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_8_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_10_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_10_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_nipple_1_2_x_10_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_nipple_1_2_x_10_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_reduced_elbow_1_2_x_3_4_90_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_reduced_elbow_1_2_x_3_4_90_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_reduced_elbow_1_2_x_3_4_90_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_reduced_elbow_1_2_x_3_4_90_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_reduced_tee_3_4_x_2_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_reduced_tee_3_4_x_2_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_reduced_tee_3_4_x_2_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_reduced_tee_3_4_x_2_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_cross_tee_1_2_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_cross_tee_1_2_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_cross_tee_1_2_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_cross_tee_1_2_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_cross_tee_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_cross_tee_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_cross_tee_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_cross_tee_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_cross_tee_1_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_cross_tee_1_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_cross_tee_1_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_cross_tee_1_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_plug_1_2_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_plug_1_2_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_plug_1_2_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_plug_1_2_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_plug_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_plug_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_plug_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_plug_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_plug_1_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_plug_1_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_plug_1_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_plug_1_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_bushing_1_2_x_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_bushing_1_2_x_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_bushing_1_2_x_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_bushing_1_2_x_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_bushing_1_x_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_bushing_1_x_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_bushing_1_x_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_bushing_1_x_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_bushing_2_x_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_bushing_2_x_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_bushing_2_x_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_bushing_2_x_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_coupling_1_2_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_coupling_1_2_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_coupling_1_2_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_coupling_1_2_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_coupling_3_4_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_coupling_3_4_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.g_i_st_coupling_3_4_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.g_i_st_coupling_3_4_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tapelon_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tapelon_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tapelon_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tapelon_unit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.concessionaire_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

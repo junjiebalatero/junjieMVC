@@ -1,0 +1,699 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<junjieComWebApp.Controllers.table_concessionaire>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br>
+<center><h5>MISAMIS OCCIDENTAL WATER DISTRICT</h5></center>
+<center><h6>Ozamiz City</h6></center>
+<center><h6>Concessionaire's Profile List</h6></center>
+<br>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @using (Html.BeginForm("Index", "concessionaire", FormMethod.Get))
+    {
+        <b>Search By:</b>
+        @Html.RadioButton("searchBy", "last_name", true) <text>last_name</text>
+        @Html.RadioButton("searchBy", "account_no") <text>account_no</text><br />
+        @Html.TextBox("search") <input type="submit" value="Search" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().middle_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().account_no)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.First().photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().photo_alt_text)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.First().purok)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().barangay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().neighbor)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.First().birth_date)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.First().contact_no)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.First().occupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().civil_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().birth_place)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().employer_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().employer_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().father_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().father_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().mother_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().mother_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().spouse_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().sp_father_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().sp_father_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().sp_mother_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().sp_mother_address)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.First().date_file)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().classification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().meter_brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().meter_serial_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().initial_reading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().connection_size)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.First().system_adequate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().plumber_available)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().inspected_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().date_inspected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().copy_received_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().installation_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().inspection_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().others)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().total_amount_due)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().o_r_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().o_r_receipt_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().o_r_amount)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.First().saddle_clamp_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().saddle_clamp_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().lm_poly_pipe_1_2_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().lm_poly_pipe_1_2_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().lm_poly_pipe_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().lm_poly_pipe_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().replacement_piece_1_2_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().replacement_piece_1_2_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().replacement_piece_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().replacement_piece_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_elbow_1_2_x_90_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_elbow_1_2_x_90_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_elbow_1_x_90_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_elbow_1_x_90_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_elbow_2_x_90_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_elbow_2_x_90_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_elbow_1_2_x_90_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_elbow_1_2_x_90_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_elbow_3_4_x_90_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_elbow_3_4_x_90_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_pipe_1_2_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_pipe_1_2_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_meterstand_1_2_x_12_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_meterstand_1_2_x_12_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_meterstand_1_2_x_24_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_meterstand_1_2_x_24_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_6_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_6_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_8_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_8_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_10_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_nipple_1_2_x_10_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_reduced_elbow_1_2_x_3_4_90_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_reduced_elbow_1_2_x_3_4_90_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_reduced_tee_3_4_x_2_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_reduced_tee_3_4_x_2_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_cross_tee_1_2_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_cross_tee_1_2_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_cross_tee_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_cross_tee_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_cross_tee_1_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_cross_tee_1_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_plug_1_2_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_plug_1_2_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_plug_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_plug_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_plug_1_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_plug_1_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_bushing_1_2_x_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_bushing_1_2_x_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_bushing_1_x_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_bushing_1_x_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_bushing_2_x_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_bushing_2_x_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_coupling_1_2_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_coupling_1_2_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_coupling_3_4_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().g_i_st_coupling_3_4_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tapelon_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tapelon_unit)
+        </th>*@
+        <th></th>
+    </tr>
+@if (Model.Count() == 0)
+{
+    <tr>
+        <td colspan="109">No rows match search criteria</td>
+    </tr>
+}
+else
+{
+    foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.middle_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.account_no)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo_alt_text)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.purok)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.barangay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.neighbor)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.birth_date)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.contact_no)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.occupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.civil_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birth_place)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employer_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employer_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.father_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.father_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mother_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mother_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.spouse_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sp_father_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sp_father_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sp_mother_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sp_mother_address)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.date_file)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.classification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.meter_brand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.meter_serial_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.initial_reading)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.connection_size)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.system_adequate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plumber_available)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inspected_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_inspected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.copy_received_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.installation_fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inspection_fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.others)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_amount_due)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.o_r_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.o_r_receipt_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.o_r_amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saddle_clamp_quantity)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.saddle_clamp_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lm_poly_pipe_1_2_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lm_poly_pipe_1_2_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lm_poly_pipe_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lm_poly_pipe_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.replacement_piece_1_2_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.replacement_piece_1_2_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.replacement_piece_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.replacement_piece_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_elbow_1_2_x_90_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_elbow_1_2_x_90_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_elbow_1_x_90_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_elbow_1_x_90_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_elbow_2_x_90_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_elbow_2_x_90_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_elbow_1_2_x_90_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_elbow_1_2_x_90_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_elbow_3_4_x_90_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_elbow_3_4_x_90_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_pipe_1_2_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_pipe_1_2_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_meterstand_1_2_x_12_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_meterstand_1_2_x_12_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_meterstand_1_2_x_24_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_meterstand_1_2_x_24_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_6_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_6_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_8_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_8_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_10_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_nipple_1_2_x_10_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_reduced_elbow_1_2_x_3_4_90_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_reduced_elbow_1_2_x_3_4_90_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_reduced_tee_3_4_x_2_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_reduced_tee_3_4_x_2_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_cross_tee_1_2_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_cross_tee_1_2_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_cross_tee_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_cross_tee_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_cross_tee_1_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_cross_tee_1_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_plug_1_2_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_plug_1_2_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_plug_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_plug_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_plug_1_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_plug_1_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_bushing_1_2_x_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_bushing_1_2_x_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_bushing_1_x_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_bushing_1_x_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_bushing_2_x_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_bushing_2_x_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_coupling_1_2_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_coupling_1_2_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_coupling_3_4_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.g_i_st_coupling_3_4_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tapelon_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tapelon_unit)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.concessionaire_id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.concessionaire_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.concessionaire_id })
+        </td>
+    </tr>
+    }
+}
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchBy = Request.QueryString["searchBy"], search = Request.QueryString["search"] }),
+    new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })
